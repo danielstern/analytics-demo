@@ -4,41 +4,16 @@
         
         <script>
 
-            // Replace this with your own tracking ID
-            window.ga_id = `UA-40501021-23`;
-
             function handleFormSubmit() {
 
                 console.info("Submitted form.");
                 event.preventDefault();
-                ga('send','formsubmit');
                 document.forms[0].innerHTML = `<h1>Thank you!</h1>`;
 
             }
 
         </script>
-        <script>
-
-            // Creates an initial ga() function.
-            // The queued commands will be executed once analytics.js loads.
-            window.ga = window.ga || function() {
-
-                (ga.q = ga.q || []).push(arguments)
-
-            };
-            
-            // Sets the time this tag was executed.
-            ga.l = +new Date;
-            
-            // Creates a default tracker with automatic cookie domain configuration.
-            ga('create', window.ga_id, 'auto');
-            
-            // Sends a pageview hit from the tracker just created.
-            ga('send', 'pageview');
-
-        </script>
     
-        <script async src='//www.google-analytics.com/analytics.js'></script>
     </head>
     <body class="m-3 col-5">
 
