@@ -4,7 +4,6 @@
         
         <script>
 
-            console.log("Test script");
             // Replace this with your own tracking ID
             window.ga_id = `UA-40501021-23`;
 
@@ -12,13 +11,14 @@
 
                 console.info("Submitted form.");
                 event.preventDefault();
-
                 ga('send','formsubmit');
+                document.forms[0].innerHTML = `<h1>Thank you!</h1>`;
 
             }
 
         </script>
         <script>
+
             // Creates an initial ga() function.
             // The queued commands will be executed once analytics.js loads.
             window.ga = window.ga || function() {
@@ -35,6 +35,7 @@
             
             // Sends a pageview hit from the tracker just created.
             ga('send', 'pageview');
+
         </script>
     
         <script async src='//www.google-analytics.com/analytics.js'></script>
@@ -92,13 +93,11 @@
                     Contact me about completely unrelated matters
                     
                 </label>
-
-             
                
             </div>
-            
 
             <button type="submit" class="btn btn-primary">Sign Me Up</button>
+
         </form>
         
     </body>
